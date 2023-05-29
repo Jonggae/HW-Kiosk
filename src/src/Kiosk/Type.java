@@ -11,6 +11,7 @@ public class Type {
         System.out.println("2. AMRAP");
         System.out.println("3. EMOM");
 
+        System.out.print("");
         typeNumber = sc.nextInt();
         String type = "";
         if(typeNumber==1) {
