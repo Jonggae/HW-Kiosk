@@ -4,6 +4,6 @@ public class CrossFit {
 
     Movements movements;
     Time time;
-
-
 }
+
+
