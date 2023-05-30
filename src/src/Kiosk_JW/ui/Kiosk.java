@@ -1,11 +1,5 @@
 package Kiosk_JW.ui;
 
-
-import Kiosk_JW.entity.Menu;
-import Kiosk_JW.entity.Order;
-
-import java.util.Scanner;
-
 public class Kiosk {
     public static void main(String[] args) {
         Home home = new Home();

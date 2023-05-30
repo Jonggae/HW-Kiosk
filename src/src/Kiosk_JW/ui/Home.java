@@ -2,6 +2,7 @@ package Kiosk_JW.ui;
 
 import Kiosk_JW.entity.Menu;
 
+
 import java.util.Scanner;
 
 public class Home {
@@ -19,6 +20,10 @@ public class Home {
         System.out.println("->> ");
         int menuSelectNum = sc.nextInt();
         menu.select(menuSelectNum); //메뉴 4가지 중 고르는 것의 하위메뉴 출력
+
+//        planets.choose();
+
+
     }
 
 }

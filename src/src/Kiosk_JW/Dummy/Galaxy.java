@@ -1,4 +1,4 @@
-package Kiosk_JW.entity;
+package Kiosk_JW.Dummy;
 
 import java.util.ArrayList;
 
