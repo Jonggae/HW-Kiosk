@@ -1,11 +1,14 @@
 package Kiosk_JW.ui;
 
 import Kiosk_JW.entity.Menu;
+import Kiosk_JW.entity.Products;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Home {
+    Kiosk kiosk = new Kiosk();
 
     public void homeMenu() {
         System.out.println("-------------------------------------");
@@ -13,6 +16,12 @@ public class Home {
         System.out.println("| ★     원하는 메뉴를 선택하세요     ★ |");
         System.out.println("-------------------------------------");
     }
+
+
+//    public void addProduct(int num, ArrayList<Products>) {
+//
+//
+//    }
 
 
     }

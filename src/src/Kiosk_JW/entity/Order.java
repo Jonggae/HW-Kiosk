@@ -5,18 +5,27 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Order {
-}
 
-//    public static double choose() {
-//        Scanner sc = new Scanner(System.in);
-//        ArrayList<String> orderList = new ArrayList<String>();
-//
-//        int choosePlanet = sc.nextInt();
-//        orderList.add(choosePlanet);
-//
-//        return 0;
-//
-//
-//
-//    }
-//}
+    private String orderProduct;
+    private int orderPrice;
+    private String orderDesc;
+
+    public void order (String orderProduct, int orderPrice, String orderDesc) {
+        this.orderPrice = orderPrice;
+        this.orderProduct = orderProduct;
+        this.orderDesc = orderDesc;
+    }
+
+    public String getOrderProduct() {
+        return orderProduct;
+    }
+
+    public String getOrderDesc() {
+        return orderDesc;
+    }
+
+    public int getOrderPrice() {
+        return orderPrice;
+    }
+
+}
