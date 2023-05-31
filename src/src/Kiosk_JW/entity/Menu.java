@@ -17,6 +17,7 @@ public class Menu {
         System.out.println("3. Planets       | 태양계 8개 행성");
         System.out.println("4. Galaxy        | 먼 우주의 은하");
     }
+
     public void constellationDetail() { // 별자리 세부메뉴
         System.out.println("Constellation 메뉴입니다.");
         ArrayList<String> constellationList = new ArrayList<String>();
@@ -36,7 +37,8 @@ public class Menu {
         for (int i = 0; i < constellationList.size(); i++) {
             System.out.println(constellationList.get(i));
         }
-}
+    }
+
     public void starDetail() { //별 세부메뉴
         System.out.println("Stars 메뉴입니다.");
         ArrayList<String> starsList = new ArrayList<String>();
@@ -49,7 +51,8 @@ public class Menu {
         for (int i = 0; i < starsList.size(); i++) {
             System.out.println(starsList.get(i));
         }
-}
+    }
+
     public void planetDetail() { // 행성 세부메뉴
         System.out.println("Planets 메뉴입니다.");
         ArrayList<String> planetsList = new ArrayList<String>();
@@ -66,19 +69,19 @@ public class Menu {
             System.out.println(planetsList.get(i));
         }
     }
-        public void galaxyDetail () { //은하 세부메뉴
-            System.out.println("Galaxy 메뉴입니다.");
-            ArrayList<String> GalaxyList = new ArrayList<String>();
-            GalaxyList.add("1. MilkyWay               | 1000 SOL | 우리 은하");
-            GalaxyList.add("2. Andromeda              | 1000 SOL | 안드로메다 은하");
-            GalaxyList.add("3. Large Magellanic Cloud | 1000 SOL | 대마젤란 은하");
-            GalaxyList.add("4. Small Magellanic Cloud | 1000 SOL | 소마젤란 은해");
 
-            for (int i = 0; i < GalaxyList.size(); i++) {
-                System.out.println(GalaxyList.get(i));
-            }
+    public void galaxyDetail() { //은하 세부메뉴
+        System.out.println("Galaxy 메뉴입니다.");
+        ArrayList<String> GalaxyList = new ArrayList<String>();
+        GalaxyList.add("1. MilkyWay               | 1000 SOL | 우리 은하");
+        GalaxyList.add("2. Andromeda              | 1000 SOL | 안드로메다 은하");
+        GalaxyList.add("3. Large Magellanic Cloud | 1000 SOL | 대마젤란 은하");
+        GalaxyList.add("4. Small Magellanic Cloud | 1000 SOL | 소마젤란 은해");
+
+        for (int i = 0; i < GalaxyList.size(); i++) {
+            System.out.println(GalaxyList.get(i));
         }
-
+    }
 
 
     public void select(int num) {
@@ -97,10 +100,10 @@ public class Menu {
             case 4:
                 galaxyDetail();
                 break;
-                default: // 1 2 3 4 가 아닐 시,
-                    System.out.println("!!!!!다시 선택하세요!!!!!");
-                    System.out.println();
-                    home.home();
+            default: // 1 2 3 4 가 아닐 시,
+                System.out.println("!!!!!다시 선택하세요!!!!!");
+                System.out.println();
+                home.home();
         }
 
     }

@@ -4,7 +4,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Order {}
+public class Order {
+}
 
 //    public static double choose() {
 //        Scanner sc = new Scanner(System.in);

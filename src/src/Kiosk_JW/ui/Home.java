@@ -2,7 +2,6 @@ package Kiosk_JW.ui;
 
 import Kiosk_JW.entity.Menu;
 
-
 import java.util.Scanner;
 
 public class Home {
