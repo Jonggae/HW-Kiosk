@@ -23,5 +23,12 @@ public class Products {
     public int getPrice() {
         return price;
     }
+
+
+    // !!! 중요한 부분 toString은 요소를 String으로 바꿀때 쓴다. 최상위 Object의 메서드이므로 오버라이딩하여 원하는 형태로 바꾸어 사용했다.
+    @Override
+    public String toString() {
+        return getProductsName()+" | " + getPrice()+" SOL"+" | " +getProductsDesc();
+    }
 }
 
