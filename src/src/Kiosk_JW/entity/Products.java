@@ -5,10 +5,13 @@ public class Products {
     private String productsName;
     private String productsDesc;
     private int price;
+    private int pNum;
+
 
 //    Home home = new Home();
 
-    public Products(String productsName, int price, String productsDesc) {
+    public Products(int pNum, String productsName, int price, String productsDesc) {
+        this.pNum = pNum;
         this.productsName = productsName;
         this.price = price;
         this.productsDesc = productsDesc;
@@ -16,6 +19,9 @@ public class Products {
 
     public String getProductsName() {
         return productsName;
+    }
+    public int getPNum() {
+        return pNum;
     }
     public String getProductsDesc() {
         return productsDesc;
