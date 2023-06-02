@@ -13,7 +13,7 @@ public class Order {
     private int orderPrice;
     private String orderDesc;
 
-    public void order(String orderProduct, int orderPrice, String orderDesc) {
+    public Order(String orderProduct, int orderPrice, String orderDesc) {
         this.orderPrice = orderPrice;
         this.orderProduct = orderProduct;
         this.orderDesc = orderDesc;
@@ -46,6 +46,11 @@ public class Order {
 
     public int getOrderPrice() {
         return orderPrice;
+    }
+
+    @Override
+    public String toString() {
+        return getOrderProduct() + " | " + getOrderPrice() + " SOL" + " | " + getOrderDesc();
     }
 
 //    private ArrayList<Order> orders() {
