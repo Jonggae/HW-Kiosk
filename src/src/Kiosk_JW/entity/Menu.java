@@ -1,9 +1,5 @@
 package Kiosk_JW.entity;
 
-import Kiosk_JW.ui.Home;
-
-
-// 별자리 (메뉴 1번)
 public class Menu {
     private String mainMenuName;
     private String description;

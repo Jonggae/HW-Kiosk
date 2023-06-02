@@ -15,8 +15,8 @@ public class Kiosk {
         Home.homeMenu(); // 화면 첫 부분 출력
         Home.printProductDetail(productDetail(mainMenu()));
         Home.orderMenu();
-
     }
+
     //메인메뉴 호출
     public ArrayList<Menu> mainMenu() {
         ArrayList<Menu> menuList = new ArrayList<>();

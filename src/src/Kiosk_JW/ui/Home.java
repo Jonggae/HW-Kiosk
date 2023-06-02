@@ -3,11 +3,9 @@ package Kiosk_JW.ui;
 import Kiosk_JW.Kiosk;
 import Kiosk_JW.Order;
 import Kiosk_JW.entity.Products;
-
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
-
 
 public class Home {
 
@@ -45,7 +43,7 @@ public class Home {
                     System.out.print(" | " + product.getProductsDesc());
                     System.out.println();
                 }
-
+//--------------------------------------------------------------------------
                 //담을 것들 선택하기
                 System.out.println("-------------------------------------");
                 System.out.println(">>>담고 싶은 천체의 번호를 입력하세요.");
@@ -61,6 +59,7 @@ public class Home {
                 } else {
                     System.out.println("현재 선택->" + products.get(orderNum - 1));
                     System.out.println("-------------------------------------");
+
                     Products ordered = products.get(orderNum - 1);
                     orderList.add(new Order(ordered.getProductsName(), ordered.getPrice(), ordered.getProductsDesc()));
                 }
@@ -89,7 +88,7 @@ public class Home {
     public static void orderMenu() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\n-------------------------------------");
-        System.out.println("5. 주문하기        6.장바구니 비우기");
+        System.out.println("5. 주문하기        6. 장바구니 비우기");
         System.out.println("0. 메인 메뉴로");
         System.out.println("-------------------------------------");
 
@@ -109,22 +108,7 @@ public class Home {
 
             default ->{System.out.println("잘못 입력하였습니다.");
                 orderMenu();}
-
         }
-//        if (orderNum == 5) {
-////
-//            System.out.println("주문이 완료되었습니다.");
-//            orderDone();
-////
-//        }
-//        if (orderNum == 6) {
-//            System.out.println("장바구니를 비웠습니다. 메인으로 돌아갑니다.");
-//            orderList.clear();
-//            kiosk.startKiosk();
-//        }
-//        if (orderNum == 0) {
-//            kiosk.startKiosk();
-//        }
     }
 
     private static void orderCheck() {
@@ -137,7 +121,6 @@ public class Home {
             case 5 -> {
                 System.out.println("---------현재 담긴 천체들입니다---------");
                 orderDone();
-
             }
             case 6 -> {
                 System.out.println("장바구니를 비웠습니다. 메인으로 돌아갑니다.");
@@ -158,8 +141,6 @@ public class Home {
             System.out.println((orderList.get(i)).toString());
         }
     }
-
-
 }
 
 
