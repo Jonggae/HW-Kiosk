@@ -1,15 +1,10 @@
 package Kiosk_JW.entity;
 
-import java.util.ArrayList;
-
 public class Products {
     private String productsName;
     private String productsDesc;
     private int price;
     private int pNum;
-
-
-//    Home home = new Home();
 
     public Products(int pNum, String productsName, int price, String productsDesc) {
         this.pNum = pNum;

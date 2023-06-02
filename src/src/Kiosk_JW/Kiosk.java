@@ -8,7 +8,6 @@ import Kiosk_JW.ui.Home;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Kiosk {
 
@@ -25,9 +24,6 @@ public class Kiosk {
         menuList.add(new Menu("2. Stars", "지구에서 보이는 별들"));
         menuList.add(new Menu("3. Planets", "태양계 8개 행성"));
         menuList.add(new Menu("4. Galaxy", "먼 우주의 은하"));
-
-//        menuList.add(new Menu("5. 담기", "천체를 담고, 확인합니다"));
-//        menuList.add(new Menu("6. 취소", "담은 내용을 비웁니다."));
 
         for (Menu menu : menuList) {
             System.out.println(menu.getMainMenuName() + "   | " + menu.getDescription());

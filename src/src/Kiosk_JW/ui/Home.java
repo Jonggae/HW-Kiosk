@@ -5,7 +5,6 @@ import Kiosk_JW.Order;
 import Kiosk_JW.entity.Products;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
