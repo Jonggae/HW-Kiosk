@@ -3,7 +3,6 @@ package Kiosk_JW.entity;
 import java.util.ArrayList;
 
 public class Products {
-private int size;
     private String productsName;
     private String productsDesc;
     private int price;

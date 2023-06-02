@@ -2,7 +2,6 @@ package Kiosk_JW.entity;
 
 import Kiosk_JW.ui.Home;
 
-import java.util.Scanner;
 
 // 별자리 (메뉴 1번)
 public class Menu {
