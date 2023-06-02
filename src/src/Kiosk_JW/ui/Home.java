@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Home {
 
-    static Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
     static ArrayList<Order> orderList = new ArrayList<>();
 
@@ -24,7 +24,6 @@ public class Home {
         System.out.println("-------------------------------------");
         System.out.println("| ★     원하는 메뉴를 선택하세요     ★ |");
         System.out.println("-------------------------------------");
-
     }
 
     public void printProductDetail(Map<String, ArrayList<Products>> productMap) {
