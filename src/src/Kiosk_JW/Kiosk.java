@@ -10,11 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Kiosk {
-
+Home home = new Home();
     public void startKiosk() {
-        Home.homeMenu(); // 화면 첫 부분 출력
-        Home.printProductDetail(productDetail(mainMenu()));
-        Home.orderMenu();
+        home.homeMenu(); // 화면 첫 부분 출력
+        home.printProductDetail(productDetail(mainMenu()));
+        home.orderMenu();
     }
 
     //메인메뉴 호출
@@ -77,6 +77,7 @@ public class Kiosk {
         products.add(new Products(2," Andromeda", 1000, "안드로메다 은하"));
         products.add(new Products(3," Large Magellanic Cloud", 1000, "대마젤란 은하"));
         products.add(new Products(4," Small Magellanic Cloud", 1000, "소마젤란 은하"));
+
         productMap.put(menuList.get(3).getMainMenuName(), products); //4. galaxy에 들어감.
         return productMap;
     }

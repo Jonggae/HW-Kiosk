@@ -3,6 +3,7 @@ package Kiosk_JW.ui;
 import Kiosk_JW.Kiosk;
 import Kiosk_JW.Order;
 import Kiosk_JW.entity.Products;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
@@ -14,9 +15,10 @@ public class Home {
     static ArrayList<Order> orderList = new ArrayList<>();
 
     static Kiosk kiosk = new Kiosk();
+    static Home home = new Home();
 
 
-    public static void homeMenu() {
+    public void homeMenu() {
         System.out.println("-------------------------------------");
         System.out.println("| ★  Welcome to Universe Market  ★ |");
         System.out.println("-------------------------------------");
@@ -24,7 +26,8 @@ public class Home {
         System.out.println("-------------------------------------");
 
     }
-    public static void printProductDetail(Map<String, ArrayList<Products>> productMap) {
+
+    public void printProductDetail(Map<String, ArrayList<Products>> productMap) {
         System.out.print(">>>");
         int inputNum = 0;
         inputNum = sc.nextInt();
@@ -32,12 +35,12 @@ public class Home {
         if (selectedCategory != null) {
             System.out.println();
             System.out.println("-------------------------------------");
-            System.out.println("     " + selectedCategory + "     ");
+            System.out.println("     " + "[ " + selectedCategory + " ]" + "     ");
 
             ArrayList<Products> products = productMap.get(selectedCategory);
             if (products != null) {
                 for (Products product : products) {
-                    System.out.print(product.getPNum() + ".");
+                    System.out.print(product.getPNum() + ") ");
                     System.out.print(product.getProductsName());
                     System.out.print(" | " + product.getPrice() + " SOL");
                     System.out.print(" | " + product.getProductsDesc());
@@ -63,9 +66,9 @@ public class Home {
                     Products ordered = products.get(orderNum - 1);
                     orderList.add(new Order(ordered.getProductsName(), ordered.getPrice(), ordered.getProductsDesc()));
                 }
-                orderCheck();
+                home.orderCheck();
                 if (orderNum == 0) {
-                    orderCheck();
+                    home.orderCheck();
                 }
 
             } else {
@@ -74,8 +77,7 @@ public class Home {
         }
     }
 
-
-    private static String getCategoryByNumber(int number) {
+    private String getCategoryByNumber(int number) {
         return switch (number) {
             case 1 -> "1. Constellation";
             case 2 -> "2. Stars";
@@ -85,7 +87,8 @@ public class Home {
             default -> "\n※※※ 잘못 고르셨습니다. 다시 선택하세요. ※※※\n";
         };
     }
-    public static void orderMenu() {
+
+    public void orderMenu() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\n-------------------------------------");
         System.out.println("5. 주문하기        6. 장바구니 비우기");
@@ -106,12 +109,14 @@ public class Home {
             }
             case 0 -> kiosk.startKiosk();
 
-            default ->{System.out.println("잘못 입력하였습니다.");
-                orderMenu();}
+            default -> {
+                System.out.println("잘못 입력하였습니다.");
+                orderMenu();
+            }
         }
     }
 
-    private static void orderCheck() {
+    private void orderCheck() {
         System.out.println("5. 장바구니 확인(확인 후 주문하세요!)");
         System.out.println("6. 장바구니 비우기");
         System.out.println("0. 더 주문하기 (메인으로)");
@@ -135,7 +140,7 @@ public class Home {
         }
     }
 
-    private static void orderDone() {
+    private void orderDone() {
         int i = 0;
         for (i = 0; i < orderList.size(); i++) {
             System.out.println((orderList.get(i)).toString());
