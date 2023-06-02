@@ -45,7 +45,6 @@ public class Home {
 
 
     public static void printProductDetail(Map<String, ArrayList<Products>> productMap) {
-
         System.out.print(">>>");
         int inputNum = 0;
         inputNum = sc.nextInt();
@@ -63,16 +62,21 @@ public class Home {
                     System.out.print(" | " + product.getProductsDesc());
                     System.out.println();
                 }
+
                 //담을 것들 선택하기
                 System.out.println(">>>담고 싶은 천체의 번호를 입력하세요.");
                 int orderNum = sc.nextInt();
                 System.out.println("-------------------------------------");
                 System.out.println(orderNum + " 번을 선택하셨습니다.");
+                if (orderNum > products.size()) {
+                    System.out.println("없는 메뉴입니다. 다시 선택하세요.");
+                    printProductDetail(kiosk.productDetail(kiosk.mainMenu()));
+                } else {
                 System.out.println("현재 선택->" + products.get(orderNum - 1));
                 System.out.println("-------------------------------------");
 
                 Products ordered = products.get(orderNum - 1);
-                orderList.add(ordered.toString());
+                orderList.add(ordered.toString());}
 
             } else {
                 kiosk.startKiosk();

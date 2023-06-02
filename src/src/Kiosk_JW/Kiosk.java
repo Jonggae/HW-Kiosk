@@ -13,14 +13,13 @@ import java.util.Scanner;
 public class Kiosk {
 
     public void startKiosk() {
-        Home home = new Home();
-        home.homeMenu(); // 화면 첫 부분 출력
+        Home.homeMenu(); // 화면 첫 부분 출력
         Home.printProductDetail(productDetail(mainMenu()));
         Home.orderMenu();
 
     }
     //메인메뉴 호출
-    private ArrayList<Menu> mainMenu() {
+    public ArrayList<Menu> mainMenu() {
         ArrayList<Menu> menuList = new ArrayList<>();
         menuList.add(new Menu("1. Constellation", "생일 별자리"));
         menuList.add(new Menu("2. Stars", "지구에서 보이는 별들"));
@@ -36,7 +35,7 @@ public class Kiosk {
     }
 
     //하위 메뉴(상품들)
-    private Map<String, ArrayList<Products>> productDetail(ArrayList<Menu> menuList) {
+    public Map<String, ArrayList<Products>> productDetail(ArrayList<Menu> menuList) {
         Map<String, ArrayList<Products>> productMap = new HashMap<>();
         // 첫번째 카테고리 product
         ArrayList<Products> products = new ArrayList<>();
